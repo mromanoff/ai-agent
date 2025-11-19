@@ -1,6 +1,6 @@
 import type { OpenAI } from 'openai';
 
-const getWeather = async (openai: OpenAI) => `hot , 90deg`;
+const getWeather = async (input: { userMessage: string; toolArgs: any }) => `hot , 90deg`;
 
 export const runTool = async (
   toolCall: OpenAI.Chat.Completions.ChatCompletionMessageToolCall,

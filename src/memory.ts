@@ -29,7 +29,7 @@ const defaultData: Data = {
   messages: []
 }
 
-export const getDb = async (messages: AIMessage) => {
+export const getDb = async () => {
   const db = await JSONFilePreset<Data>('db.json', defaultData)
   return db
 }
