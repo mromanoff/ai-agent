@@ -2,56 +2,27 @@
   "messages": [
     {
       "role": "user",
-      "content": "hi",
-      "id": "933a327a-c841-49d0-8fc0-919adf12de8a",
-      "createdAt": "2025-11-18T20:20:19.835Z"
-    },
-    {
-      "role": "assistant",
-      "content": "Hello! How can I assist you today?",
-      "refusal": null,
-      "annotations": [],
-      "id": "cb20906b-cd4d-42bc-9d0e-ef04896d300b",
-      "createdAt": "2025-11-18T20:20:20.585Z"
+      "content": "get latest dads joke and create image for this joke",
+      "id": "482f5630-19a8-4e9b-98bd-472b5aa665b6",
+      "createdAt": "2025-11-20T00:37:36.243Z"
     },
     {
       "role": "user",
-      "content": "what is the weather in Las Vegas NV?",
-      "id": "b8baa196-9b4f-40b8-8321-515883118c35",
-      "createdAt": "2025-11-18T20:21:45.058Z"
+      "content": "make me a meme image from a random dad joke",
+      "id": "f949d86d-a862-4b25-ac38-b45f6e875db7",
+      "createdAt": "2025-11-20T00:38:52.148Z"
     },
     {
-      "role": "assistant",
-      "content": null,
-      "tool_calls": [
-        {
-          "id": "call_De1TDgMb9cVsR4GOmy1wFAdU",
-          "type": "function",
-          "function": {
-            "name": "get_weather",
-            "arguments": "{\"reasoning\":\"User requested current weather information for Las Vegas, NV.\"}"
-          }
-        }
-      ],
-      "refusal": null,
-      "annotations": [],
-      "id": "19c87443-6054-4d97-8558-76eb2a04ee6b",
-      "createdAt": "2025-11-18T20:21:46.066Z"
+      "role": "user",
+      "content": "get latest dads joke and create image for this joke",
+      "id": "5351ff14-1804-49de-97ff-a98030f80413",
+      "createdAt": "2025-11-20T17:19:47.443Z"
     },
     {
-      "role": "tool",
-      "content": "hot , 90deg",
-      "tool_call_id": "call_De1TDgMb9cVsR4GOmy1wFAdU",
-      "id": "ba0afa18-96e2-4069-8bca-f3cbca46d719",
-      "createdAt": "2025-11-18T20:21:46.068Z"
-    },
-    {
-      "role": "assistant",
-      "content": "The current weather in Las Vegas, NV is hot, with a temperature of 90°F. If you need more details or forecasts, let me know!",
-      "refusal": null,
-      "annotations": [],
-      "id": "af160ec4-ebd4-4dfc-ba07-b9b09097a930",
-      "createdAt": "2025-11-18T20:21:47.324Z"
+      "role": "user",
+      "content": "get latest dads joke and create image for this joke",
+      "id": "8e5f4b41-116f-4371-8ef9-6a1ab6926a66",
+      "createdAt": "2025-11-21T21:18:31.970Z"
     }
   ]
 }

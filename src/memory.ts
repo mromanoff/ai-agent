@@ -1,6 +1,6 @@
-import {JSONFilePreset} from 'lowdb/node'
-import type {AIMessage} from '../types'
-import {v4 as uuidv4} from 'uuid'
+import { JSONFilePreset } from 'lowdb/node'
+import type { AIMessage } from '../types'
+import { v4 as uuidv4 } from 'uuid'
 
 export type MessageWithMedata = AIMessage & {
   id: string
@@ -30,8 +30,7 @@ const defaultData: Data = {
 }
 
 export const getDb = async () => {
-  const db = await JSONFilePreset<Data>('db.json', defaultData)
-  return db
+  return await JSONFilePreset<Data>('db.json', defaultData)
 }
 
 export const addMessages = async (messages: AIMessage[]) => {
