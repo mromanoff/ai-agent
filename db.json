@@ -23,6 +23,67 @@
       "content": "get latest dads joke and create image for this joke",
       "id": "8e5f4b41-116f-4371-8ef9-6a1ab6926a66",
       "createdAt": "2025-11-21T21:18:31.970Z"
+    },
+    {
+      "role": "user",
+      "content": "get latest dads joke and create image for this joke",
+      "id": "68db802a-5c0f-46e4-b42c-29a0cfaec32b",
+      "createdAt": "2025-11-21T22:12:02.680Z"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_4tgZsJgfgqFlYw3gr0ezrjpU",
+          "type": "function",
+          "function": {
+            "name": "dad_joke",
+            "arguments": "{}"
+          }
+        }
+      ],
+      "refusal": null,
+      "annotations": [],
+      "id": "609496f4-82ad-4890-ab31-5c334d1bddab",
+      "createdAt": "2025-11-21T22:12:03.482Z"
+    },
+    {
+      "role": "tool",
+      "content": "I accidentally drank a bottle of invisible ink. Now I’m in hospital, waiting to be seen.",
+      "tool_call_id": "call_4tgZsJgfgqFlYw3gr0ezrjpU",
+      "id": "9c53c117-9150-4790-94d7-8e225237dd3e",
+      "createdAt": "2025-11-21T22:12:03.713Z"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_qazYDJx4fDysyE5JTvLkkvvS",
+          "type": "function",
+          "function": {
+            "name": "generate_image",
+            "arguments": "{\"prompt\":\"A humorous cartoon scene depicting a character in a hospital bed looking confused and surrounded by medical equipment. The character has a worried expression and is holding an empty bottle labeled 'Invisible Ink'. The background shows a doctor looking puzzled, and a sign on the wall that says 'Waiting Room'. The overall tone is light-hearted and funny, capturing the essence of a dad joke.\"}"
+          }
+        }
+      ],
+      "refusal": null,
+      "annotations": [],
+      "id": "8cc4626f-d040-4343-92f4-546ea48fffac",
+      "createdAt": "2025-11-21T22:12:06.656Z"
+    },
+    {
+      "role": "user",
+      "content": "get latest dads joke and create image for this joke",
+      "id": "a4b03a99-7a41-4d8d-8ffd-b3ead1ce2d36",
+      "createdAt": "2025-11-21T22:12:57.291Z"
+    },
+    {
+      "role": "user",
+      "content": "get latest dads joke and create image for this joke",
+      "id": "a8fd225f-d684-46a7-a943-9e28b4f7a0e4",
+      "createdAt": "2025-11-21T22:15:54.681Z"
     }
   ]
 }
