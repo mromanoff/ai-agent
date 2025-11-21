@@ -16,13 +16,33 @@ export const generateImage: ToolFn<Args, string> = async({
  toolArgs,
  userMessage
 }) => {
-  const response = await openai.images.generate({
-    model: 'dall-e-3',
-    prompt: toolArgs.prompt,
-    n: 1,
-    size: '1024x1024',
-  })
+  try {
+    if (!toolArgs.prompt || toolArgs.prompt.trim().length === 0) {
+      throw new Error('Image prompt cannot be empty')
+    }
 
-  return response.data[0].url!
+    const response = await openai.images.generate({
+      model: 'dall-e-3',
+      prompt: toolArgs.prompt,
+      n: 1,
+      size: '1024x1024',
+    })
+
+    if (!response.data || response.data.length === 0 || !response.data[0].url) {
+      throw new Error('OpenAI did not return an image URL')
+    }
+
+    return response.data[0].url
+  } catch (error) {
+    if (error instanceof Error) {
+      if (error.message.includes('safety')) {
+        throw new Error('Image generation blocked by safety system. Please try a different prompt.')
+      }
+      if (error.message.includes('billing')) {
+        throw new Error('OpenAI billing issue. Please check your account.')
+      }
+    }
+    throw error
+  }
 }
 

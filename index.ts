@@ -9,4 +9,9 @@ if (!userMessage) {
   process.exit(1)
 }
 
-await runAgent({userMessage, tools})
+try {
+  await runAgent({userMessage, tools})
+} catch (error) {
+  console.error('\n❌ Error running agent:', error instanceof Error ? error.message : String(error))
+  process.exit(1)
+}
