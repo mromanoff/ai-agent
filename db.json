@@ -189,6 +189,45 @@
       "annotations": [],
       "id": "05316d5c-9f33-4aed-b4a2-aa554bc5a94d",
       "createdAt": "2025-11-21T21:17:47.387Z"
+    },
+    {
+      "role": "user",
+      "content": "get latest dads joke and create image for this joke",
+      "id": "b5129ed6-86ab-441f-9176-8016ac4cdab1",
+      "createdAt": "2025-11-21T21:59:56.445Z"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_2xxtJyq6PuVxLbX8cXxiM86G",
+          "type": "function",
+          "function": {
+            "name": "get_weather",
+            "arguments": "{\"reasoning\":\"User requested a dad joke and an image for it.\"}"
+          }
+        }
+      ],
+      "refusal": null,
+      "annotations": [],
+      "id": "eeac3619-4ec1-4cee-9b05-a5eac71bd847",
+      "createdAt": "2025-11-21T21:59:58.166Z"
+    },
+    {
+      "role": "tool",
+      "content": "hot , 90deg",
+      "tool_call_id": "call_2xxtJyq6PuVxLbX8cXxiM86G",
+      "id": "0e3efd2a-2a43-44b4-beb8-5ffa1aaa770f",
+      "createdAt": "2025-11-21T21:59:58.167Z"
+    },
+    {
+      "role": "assistant",
+      "content": "I can't fetch the latest dad jokes or create images directly. However, I can provide you with a dad joke that you can use to create an image. Here's one:\n\n**Dad Joke:** \"Why did the bicycle fall over? Because it was two-tired!\"\n\nYou can create an image featuring a cartoon bicycle lying on the ground with a humorous expression. If you need help with anything else or more jokes, just let me know!",
+      "refusal": null,
+      "annotations": [],
+      "id": "06ab53be-e788-43e6-8911-c491d03b3dd4",
+      "createdAt": "2025-11-21T22:00:00.220Z"
     }
   ]
 }
