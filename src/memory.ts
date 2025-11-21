@@ -30,18 +30,30 @@ const defaultData: Data = {
 }
 
 export const getDb = async () => {
-  return await JSONFilePreset<Data>('db.json', defaultData)
+  try {
+    return await JSONFilePreset<Data>('db.json', defaultData)
+  } catch (error) {
+    throw new Error(`Failed to access database: ${error instanceof Error ? error.message : String(error)}`)
+  }
 }
 
 export const addMessages = async (messages: AIMessage[]) => {
-  const db = await getDb()
-  db.data.messages.push(...messages.map(addMetadata))
-  await db.write()
+  try {
+    const db = await getDb()
+    db.data.messages.push(...messages.map(addMetadata))
+    await db.write()
+  } catch (error) {
+    throw new Error(`Failed to save messages: ${error instanceof Error ? error.message : String(error)}`)
+  }
 }
 
 export const getMessages = async () => {
-  const db = await getDb()
-  return db.data.messages.map(removeMetadata)
+  try {
+    const db = await getDb()
+    return db.data.messages.map(removeMetadata)
+  } catch (error) {
+    throw new Error(`Failed to retrieve messages: ${error instanceof Error ? error.message : String(error)}`)
+  }
 }
 
 export const saveToolResponse = (toolCallId: string, toolResponse: string) => {
